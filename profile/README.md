@@ -1,13 +1,10 @@
 <div align="center">
+  <img src="../media/vdk-mark.svg" alt="VDK" width="72" height="72">
 
-	# VDK (Vibe Development Kit)
-
-	**Build AI context once. Run it everywhere.**
-
-	[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-	[![Schema](https://img.shields.io/badge/AI_Context_Schema-v3.0-6366f1.svg)](https://github.com/vdkit/ai-context-schema)
-	[![CLI](https://img.shields.io/badge/CLI-Execution_Core-0ea5e9.svg)](https://github.com/vdkit/VibeKit-VDK-CLI)
-	[![Hub](https://img.shields.io/badge/Hub-vdk.tools-8b5cf6.svg)](https://vdk.tools)
+  [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+  [![Schema](https://img.shields.io/badge/AI_Context_Schema-v3.0-6366f1.svg)](https://github.com/vdkit/ai-context-schema)
+  [![npm](https://img.shields.io/npm/v/@vibe-dev-kit/cli.svg?logo=npm&label=vdk-cli)](https://www.npmjs.com/package/@vibe-dev-kit/cli)
+  [![GitHub stars](https://img.shields.io/github/stars/vdkit/VibeKit-VDK-CLI.svg?logo=github)](https://github.com/vdkit/VibeKit-VDK-CLI/stargazers)
 
 </div>
 
@@ -15,26 +12,78 @@
 
 ## Overview
 
-VDK is an ecosystem for **portable AI coding context**. Instead of rewriting instructions for every tool, VDK defines canonical blueprint semantics and adapts them across Claude Code, Codex, Cursor, GitHub Copilot, Gemini CLI, Windsurf, Cline, and more.
+**VDK (Vibe Development Kit)** is a unified ecosystem for portable AI coding context. Define blueprint behavior once through canonical schema contracts, then adapt and deploy across Claude Code, Codex, Cursor, GitHub Copilot, Gemini CLI, Windsurf, Cline, and other tool carriers.
 
-### Why VDK
+**Why VDK?**
+- Canonical `kind` taxonomy for context behavior (`project-memory`, `skill`, `agent`, etc.)
+- Deterministic adaptation with explicit outcomes (`lossless`, `lossy`, `unsupported`)
+- Curated retrieval signal model (`L0-L3` defaults; `L4` provenance opt-in)
+- End-to-end ecosystem flow from schema → blueprints → CLI → Hub → Wiki
 
-- One canonical contract for AI context behavior
-- Deterministic adaptation across platform-specific carriers
-- Curated retrieval that prioritizes signal over noise
-- Explicit conversion outcomes: `lossless`, `lossy`, `unsupported`
+## Key Features
 
-## Ecosystem Components
+<table>
+<tr>
+<td width="50%">
 
-| Component | Purpose | Repo / URL |
-|---|---|---|
-| `ai-context-schema` | Canonical schema and behavior contract | <https://github.com/vdkit/ai-context-schema> |
-| `VDK-Blueprints` | Curated blueprint inventory | <https://github.com/vdkit/VDK-Blueprints> |
-| `VDK-CLI` | Retrieval, adaptation, deployment engine | <https://github.com/vdkit/VibeKit-VDK-CLI> |
-| `VDK-Hub` | Discovery, packaging, and distribution UX | <https://github.com/vdkit/VDK-Hub> |
-| `VDK-Wiki` | Documentation and implementation guidance | <https://wiki.vdk.tools> |
+### Canonical Blueprint Architecture
+- Universal AI Context Schema as the source of truth
+- Functional taxonomy across heterogeneous tool formats
+- Cross-platform behavior mapping with adaptation contracts
+- Provenance-aware curation model for high-signal retrieval
 
-### Operating order
+### CLI Execution Core
+- Search and deploy blueprint workflows
+- Cross-tool migration and format conversion
+- Deterministic install semantics aligned to runtime adapters
+- Explicit adaptation classification on every conversion
+
+</td>
+<td width="50%">
+
+### Ecosystem Surfaces
+- **VDK Hub** for discovery, packaging, and sharing
+- **VDK Wiki** for implementation and operational docs
+- **VDK Blueprints** as curated reusable inventory
+- **ai-context-schema** for contract-level consistency
+
+### Multi-Tool Interoperability
+- Claude Code, Codex, Cursor, Copilot, Gemini CLI, Windsurf
+- Standardized behavior despite carrier-specific syntax
+- Reusable context assets across orgs and repositories
+- Migration-first architecture for reducing vendor lock-in
+
+</td>
+</tr>
+</table>
+
+## Tech Stack
+
+<div align="center">
+
+| Technology | Role in Ecosystem |
+|------------|-------------------|
+| ![Node.js](https://img.shields.io/badge/Node.js-22-339933?style=for-the-badge&logo=node.js&logoColor=white) | CLI runtime and tooling |
+| ![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=for-the-badge&logo=typescript&logoColor=white) | Type-safe ecosystem development |
+| ![Next.js](https://img.shields.io/badge/Next.js-15-000000?style=for-the-badge&logo=next.js) | VDK Hub platform |
+| ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Supabase-4169E1?style=for-the-badge&logo=postgresql&logoColor=white) | Hub data layer |
+| ![JSON Schema](https://img.shields.io/badge/JSON_Schema-Draft_7-8B5CF6?style=for-the-badge) | Canonical blueprint contract |
+
+</div>
+
+## Repositories & Surfaces
+
+### Core Repositories
+
+| Repository | Purpose |
+|------------|---------|
+| [ai-context-schema](https://github.com/vdkit/ai-context-schema) | Canonical schema and validation contract |
+| [VDK-Blueprints](https://github.com/vdkit/VDK-Blueprints) | Curated blueprint library |
+| [VibeKit-VDK-CLI](https://github.com/vdkit/VibeKit-VDK-CLI) | Runtime retrieval/adaptation/deployment engine |
+| [VDK-Hub](https://github.com/vdkit/VDK-Hub) | Web discovery and distribution platform |
+| [VDK-Wiki](https://wiki.vdk.tools) | Documentation and operational guidance |
+
+### Operating Order
 
 1. `ai-context-schema`
 2. `VDK-Blueprints`
@@ -42,64 +91,78 @@ VDK is an ecosystem for **portable AI coding context**. Instead of rewriting ins
 4. `VDK-Hub`
 5. `VDK-Wiki`
 
-Hub and docs mirror CLI runtime semantics; they do not redefine them.
-
-## Blueprint Taxonomy
-
-Canonical `kind` values:
-
-- `project-memory`
-- `conditional-rule`
-- `skill`
-- `command`
-- `workflow`
-- `agent`
-- `hook`
-- `mcp-integration`
-- `plugin-distribution`
-
-Retrieval defaults:
-
-- Blend `L0-L3` (foundation to org/workspace specific)
-- Exclude `L4` provenance variants by default
-- Surface explicit adaptation classification on conversion/deploy
+Hub and Wiki mirror CLI semantics; they do not redefine runtime behavior.
 
 ## Quick Start
 
 <table>
-	<tr>
-		<td align="center" width="25%"><strong>1. Explore</strong><br/>Browse curated blueprints</td>
-		<td align="center" width="25%"><strong>2. Select</strong><br/>Choose canonical kind + specificity</td>
-		<td align="center" width="25%"><strong>3. Deploy</strong><br/>Apply via VDK CLI semantics</td>
-		<td align="center" width="25%"><strong>4. Iterate</strong><br/>Refine through cross-tool validation</td>
-	</tr>
+<tr>
+<td align="center" width="25%">
+<strong>1. Install CLI</strong><br>
+<code>npm i -g @vibe-dev-kit/cli</code>
+</td>
+<td align="center" width="25%">
+<strong>2. Initialize</strong><br>
+<code>vdk init</code>
+</td>
+<td align="center" width="25%">
+<strong>3. Search</strong><br>
+<code>vdk search --kind skill</code>
+</td>
+<td align="center" width="25%">
+<strong>4. Deploy</strong><br>
+<code>vdk deploy &lt;blueprint-id&gt;</code>
+</td>
+</tr>
 </table>
 
-Published research: <https://zenodo.org/records/16788626>
+Published research paper: <https://zenodo.org/records/16788626>
 
-## Documentation & Links
+## Documentation
+
+<div align="center">
 
 | Resource | Link |
-|---|---|
+|----------|------|
 | Organization | <https://github.com/vdkit> |
 | Hub | <https://vdk.tools> |
 | Wiki | <https://wiki.vdk.tools> |
-| CLI issues | <https://github.com/vdkit/VibeKit-VDK-CLI/issues> |
-| Hub discussions | <https://github.com/vdkit/VDK-Hub/discussions> |
+| CLI Repository | <https://github.com/vdkit/VibeKit-VDK-CLI> |
+| Blueprints Repository | <https://github.com/vdkit/VDK-Blueprints> |
+
+</div>
 
 ## Contributing
 
-We welcome contributions across the ecosystem:
+<div align="center">
 
-- Blueprint additions and quality improvements
-- Adapter and conversion reliability fixes
-- Documentation and examples
-- Cross-platform integration testing
+[![CLI Issues](https://img.shields.io/github/issues/vdkit/VibeKit-VDK-CLI.svg?logo=github)](https://github.com/vdkit/VibeKit-VDK-CLI/issues)
+[![Hub Issues](https://img.shields.io/github/issues/vdkit/VDK-Hub.svg?logo=github)](https://github.com/vdkit/VDK-Hub/issues)
+[![Discussions](https://img.shields.io/badge/Discussions-VDK_Hub-5865F2?logo=github)](https://github.com/vdkit/VDK-Hub/discussions)
 
-Use each repository’s `CONTRIBUTING.md` for repo-specific workflow.
+</div>
+
+We welcome contributions across all repositories. Use each repo’s `CONTRIBUTING.md` for local conventions and workflow.
+
+| Type | Action |
+|------|--------|
+| Bug Report | [Open an issue](https://github.com/vdkit/VibeKit-VDK-CLI/issues) |
+| Feature Proposal | [Start a discussion](https://github.com/vdkit/VDK-Hub/discussions) |
+| Security Report | [Private disclosure policy](https://github.com/vdkit/VDK-Blueprints/security/policy) |
+
+## License
+
+VDK projects are generally MIT-licensed; verify license per repository.
 
 ---
 
 <div align="center">
-	<sub>VDK ecosystem • canonical blueprints • cross-tool adaptation</sub>
+
+  [![Website](https://img.shields.io/badge/Website-vdk.tools-6366f1?style=for-the-badge)](https://vdk.tools)
+  [![Wiki](https://img.shields.io/badge/Wiki-wiki.vdk.tools-6366f1?style=for-the-badge)](https://wiki.vdk.tools)
+  [![GitHub Org](https://img.shields.io/badge/GitHub-vdkit-111827?style=for-the-badge&logo=github)](https://github.com/vdkit)
+
+  <br>
+  <sub>Built for cross-platform AI context interoperability</sub>
+
 </div>
