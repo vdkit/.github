@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="../media/vdk-mark.svg" alt="VDK" width="72" height="72">
+  <img src="https://raw.githubusercontent.com/vdkit/VDK-Wiki/main/public/icons/logo1.png" alt="VDK" width="72" height="72">
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
   [![Schema](https://img.shields.io/badge/AI_Context_Schema-v3.0-6366f1.svg)](https://github.com/vdkit/ai-context-schema)
