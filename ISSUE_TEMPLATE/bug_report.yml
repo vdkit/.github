@@ -1,0 +1,88 @@
+name: 🐛 Bug report
+description: Report a reproducible issue in a VDK ecosystem repository.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. Please include enough detail for reliable reproduction and diagnosis.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Pre-flight checks
+      options:
+        - label: I searched existing issues.
+          required: true
+        - label: I can reproduce this on the latest available version.
+          required: true
+  - type: dropdown
+    id: repo
+    attributes:
+      label: Affected repository
+      options:
+        - ai-context-schema
+        - VDK-Blueprints
+        - VDK-CLI
+        - VDK-Hub
+        - VDK-VSCode
+        - VDK-Wiki
+        - Multiple repositories
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: Bug summary
+      description: What broke, and what did you expect instead?
+      placeholder: Concise description of expected vs actual behavior.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      placeholder: Describe expected behavior.
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      placeholder: Describe what actually happened.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / screenshots / traces
+      description: Include terminal output or screenshots where possible.
+      render: shell
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Any related links, stack traces, or temporary workarounds.
+
+  - type: input
+    id: env
+    attributes:
+      label: Environment
+      description: OS, runtime, package manager, and version details.
+      placeholder: macOS 15, Node 22, pnpm 10.x

@@ -1,0 +1,86 @@
+name: 💡 Feature request
+description: Suggest an improvement for a VDK ecosystem repository.
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the proposal. Clear problem framing + concrete acceptance criteria helps us prioritize accurately.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Pre-flight checks
+      options:
+        - label: I searched existing issues and discussions.
+          required: true
+        - label: This proposal is aligned with VDK's cross-platform blueprint goals.
+          required: true
+  - type: dropdown
+    id: repo
+    attributes:
+      label: Target repository
+      options:
+        - ai-context-schema
+        - VDK-Blueprints
+        - VDK-CLI
+        - VDK-Hub
+        - VDK-VSCode
+        - VDK-Wiki
+        - Multiple repositories
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem statement
+      description: What problem are you trying to solve?
+      placeholder: Today it is hard to...
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      placeholder: I propose we...
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      placeholder: |
+        - [ ] Criterion 1
+        - [ ] Criterion 2
+        - [ ] Criterion 3
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      placeholder: Other approaches and tradeoffs.
+
+  - type: dropdown
+    id: impact_level
+    attributes:
+      label: Expected impact level
+      options:
+        - High
+        - Medium
+        - Low
+
+  - type: textarea
+    id: breaking
+    attributes:
+      label: Potential breaking changes
+      description: Describe if this could affect existing behavior/contracts.
+      placeholder: None / Possible / Confirmed (with details)
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Expected impact
+      description: Who benefits and how this improves workflow quality.

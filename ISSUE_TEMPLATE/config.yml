@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Discussions
+    url: https://github.com/vdkit/VDK-Hub/discussions
+    about: Ask questions, share ideas, and discuss ecosystem direction.
+  - name: 🔒 Security vulnerability
+    url: https://github.com/vdkit/VDK-Blueprints/security/policy
+    about: Please report security issues privately.
+  - name: 📚 VDK Wiki
+    url: https://wiki.vdk.tools
+    about: Read docs, architecture notes, and integration guides.
